@@ -743,7 +743,7 @@ label{
     margin-right: auto;
     position: relative;
     z-index: 1;
-    background-color:red;
+   
 }
 .contenu p{
     top:100px;
@@ -839,12 +839,6 @@ label{
     display: inline-block;
 }
 
-
-
-
-
-
-
 #Upload {
     height: 100%;
     width: 100%;
@@ -855,26 +849,38 @@ label{
     z-index: 2;
     background-color: transparent;
     width: 100%; text-align: center;
-    height: 100%;
-    margin: 0 auto 0 auto;
+    min-height: 840px; height: auto;
+    margin: 107px auto 10px auto;
+    top: 0;
 }
 .Photo{
-    border-radius:150px;
+    border-radius:250px;
     float:left;
-    width:150px;
-    height:150px;
+    width:250px;
+    height:250px;
     margin-left:80px;
     margin-top:40px;
     background-size: cover;
 }
 
-.InfoUser{
-    
+.MesLike{
+    width:100px;
+    height:200px;
     background-color:white;
-    height:400px;
-    width:150px;
-    float:left;
-    margin-top:180px;
-    margin-left:40px;
+    
 
+
+.RecupMdp {
+    height: 100%;
+    width: 100%;
+}
+
+.ConnexionInscription {
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: #25373D;
+    min-height: 790px;
+    height: auto;
+    z-index: 1;
 }
