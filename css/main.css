@@ -743,6 +743,7 @@ label{
     margin-right: auto;
     position: relative;
     z-index: 1;
+    background-color:red;
 }
 .contenu p{
     top:100px;
@@ -856,4 +857,24 @@ label{
     width: 100%; text-align: center;
     height: 100%;
     margin: 0 auto 0 auto;
+}
+.Photo{
+    border-radius:150px;
+    float:left;
+    width:150px;
+    height:150px;
+    margin-left:80px;
+    margin-top:40px;
+    background-size: cover;
+}
+
+.InfoUser{
+    
+    background-color:white;
+    height:400px;
+    width:150px;
+    float:left;
+    margin-top:180px;
+    margin-left:40px;
+
 }
