@@ -6,8 +6,9 @@ if($_SESSION['logged']=="yes"){
     $chemin="";
     $nb_fichier="";
     $bio=htmlspecialchars(@$_POST['bio']);
-    echo $bio;
-    $sql="INSERT INTO user (`Biographie`) values('$bio') WHERE `Login` LIKE '$NomUtilisateur'";
+    //echo $bio;
+    $sql="UPDATE `udpm`.`user` SET `Biographie` = '$bio' WHERE `Login` = '$NomUtilisateur'";
+    //echo $sql;
     bdConnect($sql, "passelect");
     
     if($dossier = opendir('utilisateur/'.$NomUtilisateur.'/Img/ImgProfil/')){//ouvre le répértoir de l'utilisateur
@@ -32,7 +33,6 @@ if($_SESSION['logged']=="yes"){
         $nom=$ligne['Surname'];
         $texte=$ligne['Biographie'];
     }
-    
 ?>
 
 
@@ -48,12 +48,17 @@ if($_SESSION['logged']=="yes"){
             <div class="Nom"><?php echo $prenom; echo" "; echo $nom;?></div>
             <div class="bio">
                 <form id="FormBio" name="bio" action="" method="post">
-                    <textarea name="bio" id="TextBio" rows="12" cols="60" values="<?php echo $texte ?>"></textarea>
+                    <textarea name="bio" id="TextBio" rows="6" cols="30 "><?php echo $texte ?></textarea>
                     <input type="submit" value="Enregistrer" style="border:none; padding:6px 0 6px 0; border-radius:2px; box-shadow:1px 1px 10px#999; background:#2E505C; font:bold 13px Arial; color:white;">
                 </form>
             </div>
             <div class="like">
                 <p>Ces likes:</p>
+            </div>
+            <div class="ModifProfil">
+                <form action="" method="POST">
+                    <input type="submit" name="update" value="Modifier">
+                </form>
             </div>
       
         </div>

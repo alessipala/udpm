@@ -878,11 +878,12 @@ label{
     width: 100%;
 }
 .like{
-    width:500px;
-    height:250px;
+    width:300px;
+    height:500px;
      background-color:#2E505C;
-    margin-top:250px;
-    margin-left:80px;
+    margin-top:-500px;
+    margin-left:800px;
+    margin-bottom: 40px;
 }
 
 .ConnexionInscription {
@@ -897,7 +898,12 @@ label{
 .bio{
     width:500px;
     height:200px;
-    margin-left:800px;
-    margin-top:-30px;
+    margin-left:100px;
+    margin-top:300px;
+    
+}
+.ModifProfil{
+    margin-top:-700px;
+    margin-left:1200px;
     
 }
