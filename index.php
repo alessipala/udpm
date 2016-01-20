@@ -11,7 +11,7 @@ if(isset($_GET['page'])){
 ?>
         <!doctype html>
         <html>
-            <head>
+            <head><!--proute-->
                 <meta charset="UTF-8">
                 <script src="js/jquery-1.11.3.min.js"></script>
                 <link href="css/main.css" rel="stylesheet" type="text/css">
