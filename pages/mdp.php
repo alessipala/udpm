@@ -1,12 +1,18 @@
 <?php
-$email=@$_POST['Email'];
+include('Include/ConnexionBaseDeDonnees.php');
+$email=@$_POST['email'];
+if($email!=""){
+    $requete2="SELECT * FROM user WHERE Email='$email'";
+    $resultat=bdConnect($requete2,"select");
+    while($ligne=$resultat->fetch()){
+        $message="Login : ".$ligne['Login']."\nMot de passe : ".$ligne['Password']."\nCe message à définitivement le swag absolu.";
+        mail($email,"Récupération mot de passe et login UDPM",$message);
+    }
+}
 $retour=@$_GET['retour'];
 if($retour==1){
-    header("Location:index.php?page=Music");   
+    header("Location:index.php");   
 }
-include('Include/ConnexionBaseDeDonnees.php');
-$requete="Select Email from user where Email='$email'";
-
 ?>
 <div class="mdp" hidden>
     <p style="padding:0 10px 0 10px">Pour récupérer votre mode de passe ou login, veuillez entrer votre email.</p>
